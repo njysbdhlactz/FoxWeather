@@ -1,0 +1,46 @@
+/* tipoff.wxss */
+.header
+{
+  width: 100%;
+  height: 160rpx;
+}
+.header image{
+  width: 100%;
+  height: 160rpx;
+}
+.jvbao{
+  background-color:rgba(0,0,0, 0.5);
+  padding: 15rpx;
+  color: #eee;
+  width: 98%;
+}
+.location
+{
+  padding: 3rpx;
+}
+.location image
+{
+  width: 48rpx;
+  height: 48rpx;
+}
+.lable{
+  padding: 8rpx;
+}
+.prompt{
+  font-size: 24rpx;
+}
+.texBox{
+  background-color:white;
+  color: black;
+  margin-bottom: 16rpx;
+  margin-top: 18rpx;
+}
+.pics image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.btn{
+  background:#4682B4;
+  color:white;
+  height: 76rpx;
+}

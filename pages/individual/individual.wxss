@@ -1,0 +1,39 @@
+/* individual.wxss */
+.content{
+  background-attachment: fixed;
+  background-image: url(http://www.foxweather.cn/ZXCimages/me.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 1130rpx;
+}
+.header{
+  background-color:rgba(0, 0, 0, 0.3);
+  color: #eee;
+  width: 100%;
+  height: 35.7%;
+}
+.katongBox{
+  width: 100%;
+  height: 64.3%;
+  display: flex;
+  margin-left: 50rpx;
+}
+.katong{
+  vertical-align: top;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: black;
+}

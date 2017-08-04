@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/weather/weather",
+    "pages/tipoff/tipoff",
+    "pages/individual/individual",
+    "pages/switchcity/switchcity",
+    "pages/regeocoding/regeocoding"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#2B2B2B",
+    "list": [
+      {
+        "pagePath": "pages/weather/weather",
+        "iconPath": "assets/images/11.png",
+        "selectedIconPath": "assets/images/12.png",
+        "text": "空气实况"
+      },
+      {
+        "pagePath": "pages/tipoff/tipoff",
+        "iconPath": "assets/images/21.png",
+        "selectedIconPath": "assets/images/22.png",
+        "text": "我要举报"
+      },
+      {
+        "pagePath": "pages/individual/individual",
+        "iconPath": "assets/images/31.png",
+        "selectedIconPath": "assets/images/32.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2B2B2B",
+    "navigationBarTitleText": "狐狸天气",
+    "navigationBarTextStyle": "white"
+  }
+}

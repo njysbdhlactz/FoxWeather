@@ -1,0 +1,164 @@
+<view class="content">
+<scroll-view scroll-y="true" style="height: 1200rpx;" scroll-into-view="{{bottom}}" scroll-top="{{head}}">
+  <view class="weather" id="head">
+    <view class="panle1">
+      <view class="city"  bindtap="city"><text style="font-size: {{citysize}}rpx;">{{inputCity}}</text><image src="/assets/images/switch.png"/></view>
+      <view class="aqi"><text class="aqi1">{{aqi}}</text><text class="lb">AQI指数</text></view>
+    </view>
+    <view class="panle2">
+      <view class="num1"><text class="tem">{{temperature}}℃</text></view>
+      <view class="num2">
+      <image src="{{leafpic}}"/><text>{{quality}}</text>
+      <image src="/assets/images/raindrop.png"/><text>{{sd}}</text>
+      <image src="/assets/images/wind.png"/><text>{{wind_power}}</text>
+      <text>{{"\n"}}更新时间：{{temperature_time}}</text>
+      </view>
+    </view>
+  </view>  
+  <view class="paiming">
+  <text>区域：{{cityInfo}}{{"  地图模式："}}</text><image src="/assets/images/curcity.png" bindtap="map"/>
+  </view>
+  <view class="airlizi">
+  <text>空气污染粒子浓度</text>
+  <progress percent="{{bar}}" color="{{color}}" show-info="true"/>
+    <view class="table">
+        <view class="tr">
+            <view class="th">{{"PM2.5"}}</view>
+            <view class="th">{{"PM10"}}</view>
+            <view class="th">{{"SO2"}}</view>
+        </view>
+        <view class="tr">
+            <view class="td">{{pm2_5}}</view>
+            <view class="td">{{pm10}}</view>
+            <view class="td">{{so2}}</view>
+        </view>
+        <view class="tr">
+            <view class="th">{{"NO2"}}</view>
+            <view class="th">{{"O3"}}</view>
+            <view class="th">{{"CO"}}</view>
+        </view>
+        <view class="tr">
+            <view class="td">{{no2}}</view>
+            <view class="td">{{o3}}</view>
+            <view class="td">{{co}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="yizhou">
+  <text>一周预报</text>
+  <view class="table">
+        <view class="tr">
+            <view class="th">{{"今天"}}</view>
+            <view class="th">{{day2}}</view>
+            <view class="th">{{day3}}</view>
+            <view class="th">{{day4}}</view>
+            <view class="th">{{day5}}</view>
+            <view class="th">{{day6}}</view>
+        </view>
+        <view class="tr">
+            <view class="th"><image src="{{leafpic}}"/></view>
+            <view class="th"><image src="{{leafpic}}"/></view>
+            <view class="th"><image src="{{leafpic}}"/></view>
+            <view class="th"><image src="{{leafpic}}"/></view>
+            <view class="th"><image src="{{leafpic}}"/></view>
+            <view class="th"><image src="{{leafpic}}"/></view>
+        </view>
+        <view class="tr">
+            <view class="th">{{day1_quality}}</view>
+            <view class="th">{{day2_quality}}</view>
+            <view class="th">{{day3_quality}}</view>
+            <view class="th">{{day4_quality}}</view>
+            <view class="th">{{day5_quality}}</view>
+            <view class="th">{{day6_quality}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="yubao">
+    <view class="day1">
+      <view class="table2">
+          <view class="ti">
+              <view class="ti">{{"明天  "}}{{day2_quality}}</view>
+              <view class="ti">{{day2_night_air_temperature}}{{"/"}}{{day2_day_air_temperature}}℃</view>
+          </view>
+          <view class="ti">
+              <view class="ti">{{day2_day_weather}}~{{day2_night_weather}}</view>
+              <view class="ti"><image class="weatherImage" src="{{day2_day_weather_pic}}"/>~<image class="weatherImage" src="{{day2_night_weather_pic}}"/></view>
+          </view>
+      </view>
+    </view>
+    <view class="day2">
+      <view class="table">
+          <view class="ti">
+              <view class="ti">{{"后天"}}{{day3_quality}}</view>
+              <view class="ti">{{day3_night_air_temperature}}{{"/"}}{{day3_day_air_temperature}}℃</view>
+          </view>
+          <view class="ti">
+              <view class="ti">{{day3_day_weather}}~{{day3_night_weather}}</view>
+              <view class="ti"><image class="weatherImage" src="{{day3_day_weather_pic}}"/>~<image class="weatherImage" src="{{day3_night_weather_pic}}"/></view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <view class="life">
+  <text>生活指数</text>
+  <view class="table1">
+        <view class="tr">
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/love.png"/>
+              <text>{{"\n约会指数\n"}}</text>
+              <text>{{yh}}</text>
+            </view>
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/cw.png"/>
+              <text>{{"\n洗车指数\n"}}</text>
+              <text>{{wash_car}}</text>
+            </view>
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/drsg.png"/>
+              <text>{{"\n穿衣指数\n"}}</text>
+              <text>{{clothes}}</text>
+            </view>
+        </view>
+        <view class="tr">
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/flu.png"/>
+              <text>{{"\n感冒指数\n"}}</text>
+              <text>{{cold}}</text>
+            </view>
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/sport.png"/>
+              <text>{{"\n运动指数\n"}}</text>
+              <text>{{sports}}</text>
+            </view>
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/trav.png"/>
+              <text>{{"\n旅游指数\n"}}</text>
+              <text>{{travel}}</text>
+            </view>
+        </view>
+        <view class="tr" id="bottom">
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/uv.png"/>
+              <text>{{"\n紫外线指数\n"}}</text>
+              <text>{{uv}}</text>
+            </view>
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/makeup.png"/>
+              <text>{{"\n化妆指数\n"}}</text>
+              <text>{{beauty}}</text>
+            </view>
+            <view class="th1">
+              <image class="weatherImage" src="/assets/images/fish.png"/>
+              <text>{{"\n钓鱼指数\n"}}</text>
+              <text>{{dy}}</text>
+            </view>
+        </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>

@@ -1,0 +1,23 @@
+<view class="content">
+  <view class="header">
+    <view  bindtap="bindViewTap" class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="bar">
+      <text>{{"室外运动量\n"}}</text>
+      <progress percent="{{runnum}}" color="green" active="true" show-info="true" stroke-width="10"/>
+    </view>
+    <view class="bar">
+      <text>{{"霾化度\n"}}</text>
+      <progress percent="{{smognum}}" color="#696969" active="true" show-info="true" stroke-width="10"/>
+    </view>
+  </view>
+  <view class="katongBox">
+    <view class="katong">
+      <image src="{{katong}}" style="width: 280rpx;height: 570rpx;" bindtap="remark"></image>
+    </view>
+    <view class="katong"></view>
+    <image src="{{pics}}" style="width: 380rpx;height: 285rpx;"></image>
+  </view>
+</view>

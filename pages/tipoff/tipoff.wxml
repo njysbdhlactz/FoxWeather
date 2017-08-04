@@ -1,0 +1,45 @@
+<view class="content">
+  <view class="header"><image src="http://www.foxweather.cn/ZXCimages/jvbaoHead.png"></image></view>
+  <view class="jvbao">
+    <view class="location"  bindtap="getmap"><text>{{"发现污染的位置:"}}</text><image src="/assets/images/location.png"   bindtap="getmap"></image>
+    <text>{{"\n"}}{{tiplocation}}</text>
+    </view>
+    <view class="lable">
+      <text>污染类型（多选）:</text>
+      <checkbox-group>
+      <label class="checkbox" wx:for="{{items}}" wx:key="key">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+      </checkbox-group>
+    </view>
+    <view class="lable">
+      <text>{{"上传照片\n"}}</text>
+      <view class="prompt">
+         <text>请上传您所举报的污染问题的证据照片以及证明位置的地标建筑物的照片</text>
+      </view>
+      <view class="pics">
+      <label class="pics" wx:for="{{pics}}" wx:key="key">
+        <image src="{{item}}"></image>
+      </label>
+      <image src="/assets/images/add.png" catchtap="chooseImageTap"></image>
+      </view>
+    </view>
+    <view class="lable">
+      <text>{{"问题描述\n"}}</text>
+      <view class="prompt">
+         <text>请详细描述被举报</text>
+         <text style="color:#F00">单位名称，</text>
+         <text style="color:#EE82EE">详细地址，</text>
+         <text style="color:#8A2BE2">污染现象，</text>
+         <text style="color:#0000FF">污染程度，</text>
+         <text style="color:#00FFFF">持续时间，</text>
+         <text style="color:	#00FF00">人体主观感受</text>
+         <text>等</text>
+      </view>
+      <view class="texBox">
+        <textarea maxlength="300" style="height: 4.3em;width:100%" value="{{description}}"/>
+      </view>
+    </view>
+    <button class="btn" bindtap="submit">提交</button>
+  </view>
+</view>
